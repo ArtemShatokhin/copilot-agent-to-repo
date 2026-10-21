@@ -1,0 +1,39 @@
+{
+  "agents": [
+    {
+      "agent": "support-triage",
+      "topic": "refund-request",
+      "trigger_phrases": "refund;money back;charged twice",
+      "instructions": "Ask for the order id, check the refund window, then hand off to a human if the amount is over 200.",
+      "tools": "lookup_order,create_refund"
+    },
+    {
+      "agent": "support-triage",
+      "topic": "order-status",
+      "trigger_phrases": "where is my order;tracking;has it shipped",
+      "instructions": "Look up the order, read back the carrier and the last scan event, and never promise a delivery date.",
+      "tools": "lookup_order"
+    },
+    {
+      "agent": "it-helpdesk",
+      "topic": "password-reset",
+      "trigger_phrases": "reset my password;locked out;cannot sign in",
+      "instructions": "Confirm the account, send the self-service reset link, and close the ticket only after the user confirms the new password works.",
+      "tools": "lookup_user,send_reset"
+    },
+    {
+      "agent": "it-helpdesk",
+      "topic": "vpn-access",
+      "trigger_phrases": "vpn;cannot connect;remote access",
+      "instructions": "Check whether the user has an an active VPN seat, then route the request to the network queue.",
+      "tools": "lookup_user"
+    },
+    {
+      "agent": "it-helpdesk",
+      "topic": "software-request",
+      "trigger_phrases": "install app;app request;new tool",
+      "instructions": "Collect the app name and the business reason, then create a procurement request.",
+      "tools": "create_request"
+    }
+  ]
+}
