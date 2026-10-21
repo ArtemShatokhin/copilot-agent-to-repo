@@ -1,0 +1,6 @@
+agent,topic,trigger_phrases,instructions,tools
+support-triage,refund-request,"refund;money back;charged twice","Ask for the order id, check the refund window, then hand off to a human if the amount is over 200.","lookup_order,create_refund"
+support-triage,order-status,"where is my order;tracking;has it shipped","Look up the order, read back the carrier and the last scan event, and never promise a delivery date.","lookup_order"
+it-helpdesk,password-reset,"reset my password;locked out;cannot sign in","Confirm the account, send the self-service reset link, and close the ticket only after the user confirms the new password works.","lookup_user,send_reset"
+it-helpdesk,vpn-access,"vpn;cannot connect;remote access","Check whether the user has an an active VPN seat, then route the request to the network queue.","lookup_user"
+it-helpdesk,software-request,"install app;app request;new tool","Collect the app name and the business reason, then create a procurement request.","create_request"
