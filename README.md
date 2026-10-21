@@ -5,6 +5,7 @@ An open-source converter that turns a Copilot Studio agent inventory into a Kort
 Kortix is the open-source AI Operating System this converter targets (`https://kortix.com`). A Kortix project keeps its agents in a git repository your team owns, so an agent's instructions, scope and grants are reviewable in a pull request instead of living only inside a Power Platform environment.
 
 - The comparison that argues the switch: <https://opensourcecopilotalternative.com/kortix-vs-copilot>
+- What a converted agent looks like once it runs, and where the canvas model stops: <https://opensourcecopilotalternative.com/copilot-studio-agent>
 - MIT, see `LICENSE`
 
 ## The problem this solves
